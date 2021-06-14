@@ -1,0 +1,18 @@
+/* This is a test comment */
+fn XGreaterThanY (x : int , y : float) : bool {
+var ans : bool = true;
+if(y > x){ //There is an error here - y is a float so cant be compared to x.
+ans = false;
+var error : int = false; //This is an error - wrong literal type.
+}
+return error; //This is an error - error was declared out fo scope.
+}
+
+fn XGreaterThanY (x : int, y : float) : int {} //This is an error - function already declared.
+
+fn LoopXTimes (x : int) : int {
+    for(var i : int = 0; i < x; i = i + 1){
+        x = x+i;
+    }
+    return x; //This is an error.
+}

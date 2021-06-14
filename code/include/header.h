@@ -1,0 +1,33 @@
+#ifndef COMPILERSASSIGNMENT_HEADER_H
+#define COMPILERSASSIGNMENT_HEADER_H
+
+#include <iostream>
+#include "../src/lexer.cpp"
+#include "../src/AST/ASTNode.cpp"
+#include "../src/AST/ASTExpressionNode.cpp"
+#include "../src/AST/ASTExpressionSubExpression.cpp"
+#include "../src/AST/ASTExpressionUnary.cpp"
+#include "../src/AST/ASTExpressionLiteral.cpp"
+#include "../src/AST/ASTExpressionLiteralFloat.cpp"
+#include "../src/AST/ASTExpressionLiteralInt.cpp"
+#include "../src/AST/ASTExpressionLiteralBool.cpp"
+#include "../src/AST/ASTExpressionIdentifier.cpp"
+#include "../src/AST/ASTExpressionFunctionCall.cpp"
+#include "../src/AST/ASTExpressionBinary.cpp"
+#include "../src/AST/ASTStatementNode.cpp"
+#include "../src/AST/ASTStatementVarDeclare.cpp"
+#include "../src/AST/ASTStatementAssignment.cpp"
+#include "../src/AST/ASTStatementPrint.cpp"
+#include "../src/AST/ASTStatementBlock.cpp"
+#include "../src/AST/ASTProgramNode.cpp"
+#include "../src/AST/ASTStatementIf.cpp"
+#include "../src/AST/ASTStatementFor.cpp"
+#include "../src/AST/ASTStatementReturn.cpp"
+#include "../src/AST/ASTFormalParams.cpp"
+#include "../src/AST/ASTStatementFunctionDeclare.cpp"
+#include "../src/parser.cpp"
+#include "../src/printInfoVisitor.cpp"
+#include "../src/SymbolTable/symbolTable.cpp"
+#include "../src/semanticAnalysisVisitor.cpp"
+
+#endif //COMPILERSASSIGNMENT_HEADER_H

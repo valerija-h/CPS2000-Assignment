@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProgramNode>
+	<FunctionDeclaration Type="TOK_BOOL_TYPE">
+		<Identifier>XGreaterThanY</Identifier>
+		<FormalParameters>
+			<FormalParameter Type="TOK_INT_TYPE">
+				<Identifier>x</Identifier>
+			</FormalParameter>
+			<FormalParameter Type="TOK_FLOAT_TYPE">
+				<Identifier>y</Identifier>
+			</FormalParameter>
+		</FormalParameters>
+		<BlockStatement>
+			<VariableDeclaration>
+				<Variable Type="TOK_BOOL_TYPE">ans</Variable>
+				<Expression>
+					<BoolLiteral>true</BoolLiteral>
+				</Expression>
+			</VariableDeclaration>
+			<IfStatement>
+				<Expression>
+					<BinaryExpression Op=">">
+						<Identifier>y</Identifier>
+						<Identifier>x</Identifier>
+					</BinaryExpression>
+				</Expression>
+				<BlockStatement>
+					<Assignment>
+						<Identifier>ans</Identifier>
+						<Expression>
+							<BoolLiteral>false</BoolLiteral>
+						</Expression>
+					</Assignment>
+					<VariableDeclaration>
+						<Variable Type="TOK_INT_TYPE">error</Variable>
+						<Expression>
+							<BoolLiteral>false</BoolLiteral>
+						</Expression>
+					</VariableDeclaration>
+				</BlockStatement>
+			</IfStatement>
+			<ReturnStatement>
+				<Expression>
+					<Identifier>error</Identifier>
+				</Expression>
+			</ReturnStatement>
+		</BlockStatement>
+	</FunctionDeclaration>
+	<FunctionDeclaration Type="TOK_INT_TYPE">
+		<Identifier>XGreaterThanY</Identifier>
+		<FormalParameters>
+			<FormalParameter Type="TOK_INT_TYPE">
+				<Identifier>x</Identifier>
+			</FormalParameter>
+			<FormalParameter Type="TOK_FLOAT_TYPE">
+				<Identifier>y</Identifier>
+			</FormalParameter>
+		</FormalParameters>
+		<BlockStatement>
+		</BlockStatement>
+	</FunctionDeclaration>
+	<FunctionDeclaration Type="TOK_INT_TYPE">
+		<Identifier>LoopXTimes</Identifier>
+		<FormalParameters>
+			<FormalParameter Type="TOK_INT_TYPE">
+				<Identifier>x</Identifier>
+			</FormalParameter>
+		</FormalParameters>
+		<BlockStatement>
+			<ForStatement>
+				<VariableDeclaration>
+					<Variable Type="TOK_INT_TYPE">i</Variable>
+					<Expression>
+						<IntLiteral>0</IntLiteral>
+					</Expression>
+				</VariableDeclaration>
+				<Expression>
+					<BinaryExpression Op="<">
+						<Identifier>i</Identifier>
+						<Identifier>x</Identifier>
+					</BinaryExpression>
+				</Expression>
+				<Assignment>
+					<Identifier>i</Identifier>
+					<Expression>
+						<BinaryExpression Op="+">
+							<Identifier>i</Identifier>
+							<IntLiteral>1</IntLiteral>
+						</BinaryExpression>
+					</Expression>
+				</Assignment>
+			</ForStatement>
+			<ReturnStatement>
+				<Expression>
+					<Identifier>x</Identifier>
+				</Expression>
+			</ReturnStatement>
+		</BlockStatement>
+	</FunctionDeclaration>
+</ProgramNode>
